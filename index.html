@@ -13,43 +13,34 @@
 </head>
 
 <body>
-
-
-
+    <nav class="navbar navbar-custom">
+        <a class="navbar-brand">
+            <h2>VG Hypeman</h2>
+        </a>
+        <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </nav>
 
 
 
     <div class="container-flex buttonField">
         <div class="row">
-                <div class="input-group mb-3">
-                        <input id="game-entry" type="text" class="form-control" placeholder="Enter game"
-                            aria-label="Recipient's username" aria-describedby="basic-addon2">
-            <div class="input-group-append">
-                <button class="input-group-text" id="game-submit" onclick="getGame()">Enter Game</button>
-            </div>
-        </div>
-            <div id="game-name" class="col-sm"></div>
-            <div id="game-background_image" class="col-sm"></div>
-            <div id="game-clip" class="col-sm"></div>
-            <div id="game-platforms" class="col-sm"></div>
-            <div id="game-released" class="col-sm"></div>
-            <div id="game-genres" class="col-sm"></div>
-            <div id="game-short_screenshots" class="col-sm"></div>
-
             <div class="col-sm">
-                <button type="button" class="btn btn-outline-dark">Twitter</button>
+                <button type="button" class="socialBtn twitter btn btn-outline-dark"></button>
             </div>
             <div class="col-sm">
-                <button type="button" class="btn btn-outline-dark">Facebook</button>
+                <button type="button" class="socialBtn facebook btn btn-outline-dark"></button>
             </div>
             <div class="col-sm">
-                <button type="button" class="btn btn-outline-dark">Official</button>
+                <button type="button" class="socialBtn official btn btn-outline-dark">Official</button>
             </div>
             <div class="col-sm">
-                <button type="button" class="btn btn-outline-dark">Twitch</button>
+                <button type="button" class="socialBtn twitch btn btn-outline-dark"></button>
             </div>
             <div class="col-sm">
-                <button type="button" class="btn btn-outline-dark">Youtube</button>
+                <button type="button" class="socialBtn youtube btn btn-outline-dark"></button>
             </div>
         </div>
     </div>

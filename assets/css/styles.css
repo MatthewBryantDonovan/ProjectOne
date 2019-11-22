@@ -12,4 +12,47 @@ body {
 .matt{
     height: 100px;
     width:  100px;
+    /* background-color: lightgrey; */
+    background-image: url("../images/placeholderBackground.jpg");
+    color: white;
+}
+
+.navbar-custom {
+    background-color: #090b3d;
+}
+
+.buttonField {
+    width: 80%;
+    position: absolute;
+    left: 10%;
+    bottom: 5%;
+}
+
+.twitter {
+    background-image: url("../images/twitterFull.jpg");
+    background-size: 96.23px 38px;
+    /* background-repeat: no-repeat; */
+}
+
+.facebook {
+    background-image: url("../images/fbFull.png");
+    background-size: 96.23px 38px;
+    /* background-repeat: no-repeat; */
+}
+
+.twitch {
+    background-image: url("../images/twitchFull.png");
+    background-size: 96.23px 38px;
+    /* background-repeat: no-repeat; */
+}
+
+.youtube {
+    background-image: url("../images/ytFull.jpg");
+    background-size: 96.23px 38px;
+    /* background-repeat: no-repeat; */
+}
+
+.socialBtn {
+    width: 96.23px;
+    height: 38px;
 }
