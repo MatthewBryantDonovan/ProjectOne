@@ -130,5 +130,3 @@ function getGameWebs(game) {
         } */
 };
 
-console.log("hello");
-
