@@ -1,6 +1,6 @@
 body {
     /* background-color: lightgrey; */
-    background-image: url("/assets/images/placeholderBackground.jpg");
+    background-image: url("../images/placeholderBackground.jpg");
     color: white;
 }
 
@@ -16,25 +16,25 @@ body {
 }
 
 .twitter {
-    background-image: url("/assets/images/twitterFull.jpg");
+    background-image: url("../images/twitterFull.jpg");
     background-size: 96.23px 38px;
     /* background-repeat: no-repeat; */
 }
 
 .facebook {
-    background-image: url("/assets/images/fbFull.png");
+    background-image: url("../images/fbFull.png");
     background-size: 96.23px 38px;
     /* background-repeat: no-repeat; */
 }
 
 .twitch {
-    background-image: url("/assets/images/twitchFull.png");
+    background-image: url("../images/twitchFull.png");
     background-size: 96.23px 38px;
     /* background-repeat: no-repeat; */
 }
 
 .youtube {
-    background-image: url("/assets/images/ytFull.jpg");
+    background-image: url("../images/ytFull.jpg");
     background-size: 96.23px 38px;
     /* background-repeat: no-repeat; */
 }
