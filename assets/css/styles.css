@@ -1,0 +1,10 @@
+body {
+    background-color: lightgrey;
+}
+
+.buttonField {
+    width: 100%;
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+}
