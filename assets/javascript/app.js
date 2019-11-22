@@ -129,3 +129,6 @@ function getGameWebs(game) {
             console.log(response);
         } */
 };
+
+console.log("hello");
+
