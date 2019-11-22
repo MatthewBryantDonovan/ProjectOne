@@ -118,4 +118,17 @@ function getGameWebs(game) {
     });
 
 
-getGameWebs("Halo");
+    /*     var XML = new XMLHttpRequest();
+        var response = null;
+
+        XML.open("GET", "https://api.twitch.tv/helix/streams/?game_id=33214");
+        XML.setRequestHeader('Client-ID', 'ynhtm2667o42ij79qpienqgfg5jbzr');
+        XML.send();
+        XML.onload = function () {
+            response = JSON.parse(XML.response);
+            console.log(response);
+        } */
+};
+
+console.log("hello");
+
