@@ -1,13 +1,5 @@
 var currentGameID = 0;
 
-var userInput = document.getElementById("game-entry");
-userInput.addEventListener("keyup", function (event) {
-    if (event.keyCode === 13) {
-        event.preventDefault();
-        document.getElementById("game-submit").click();
-    }
-});
-
 function getGame() {
     var game = "";
     event.preventDefault();
