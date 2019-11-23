@@ -1,11 +1,16 @@
 body {
-    /* background-color: lightgrey; */
-    background-image: url("../images/placeholderBackground.jpg");
+    background-color: rgb(152, 155, 168);
+    /* background-image: url("../images/placeholderBackground.jpg"); */
     color: white;
 }
 
 .navbar-custom {
     background-color: #090b3d;
+}
+
+.fieldBox {
+    background-color: black;
+    width: 100%;
 }
 
 .buttonField {
