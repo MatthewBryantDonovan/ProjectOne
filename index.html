@@ -13,17 +13,19 @@
 </head>
 
 <body>
+    <nav class="navbar navbar-custom">
+        <a class="navbar-brand">
+            <h2>VG Hypeman</h2>
+        </a>
+        <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </nav>
 
     <script src="https://embed.twitch.tv/embed/v1.js"></script>
             
         <div class="container-fluid">
-            
-                <div class="container-flex searchDiv">
-                        <form class="form-inline my-2 my-lg-0 " id="searchBox">
-                          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                        </form>
-                </div>
         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
                 
             <div class="carousel-inner">
@@ -49,24 +51,25 @@
               <span class="sr-only">Next</span>
             </a>
             <div class="container-flex buttonField buttonDiv">
-                <div class="row">
-                    <div class="col-sm">
-                        <button type="button" class="btn btn-outline-dark">Twitter</button>
-                    </div>
-                    <div class="col-sm">
-                        <button type="button" class="btn btn-outline-dark">Facebook</button>
-                    </div>
-                    <div class="col-sm">
-                        <button type="button" class="btn btn-outline-dark">Official</button>
-                    </div>
-                    <div class="col-sm">
-                        <button type="button" class="btn btn-outline-dark">Twitch</button>
-                    </div>
-                    <div class="col-sm">
-                        <button type="button" class="btn btn-outline-dark">Youtube</button>
+                    <div class="row">
+                        <div class="col-sm">
+                            <a href="https://twitter.com" target="_blank" class="socialBtn twitter btn"></a>
+                        </div>
+                        <div class="col-sm">
+                            <a href="https://facebook.com" target="_blank" class="socialBtn facebook btn"></a>
+                        </div>
+                        <div class="col-sm">
+                            <a href="https://google.com" target="_blank"
+                                class="socialBtn official btn btn-outline-light">Official</a>
+                        </div>
+                        <div class="col-sm">
+                            <a href="https://twitch.com" target="_blank" class="socialBtn twitch btn"></a>
+                        </div>
+                        <div class="col-sm">
+                            <a href="https://youtube.com" target="_blank" class="socialBtn youtube btn"></a>
+                        </div>
                     </div>
                 </div>
-            </div>
           </div>
 </div>
 
@@ -83,8 +86,15 @@
             });
           </script>
 
+    
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+
+    <script src="assets/javascript/app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
     </script>
@@ -92,7 +102,6 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="assets/javascript/app.js"></script>
 </body>
 
 </html>

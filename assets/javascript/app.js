@@ -8,6 +8,7 @@ userInput.addEventListener("keyup", function (event) {
     }
 });
 //change
+
 function getGame() {
     var game = "";
     event.preventDefault();
@@ -129,3 +130,6 @@ function getGameWebs(game) {
             console.log(response);
         } */
 };
+
+console.log("hello");
+
