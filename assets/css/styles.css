@@ -8,3 +8,21 @@ body {
     left: 5%;
     bottom: 5%;
 }
+
+.buttonDiv {
+   z-index: 50;
+}
+
+.carousel-control-prev{
+    height:0;
+    top:50%;
+}
+
+.carousel-control-next{
+    height:0;
+    top:50%;
+}
+
+.searchDiv {
+    z-index: 51;
+}
