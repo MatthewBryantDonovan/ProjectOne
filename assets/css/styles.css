@@ -8,7 +8,6 @@ body {
     background-color: #090b3d;
 }
 
-
 .buttonField {
     width: 80%;
     position: absolute;
@@ -16,13 +15,13 @@ body {
     bottom: 5%;
 }
 
-#header-search {
+#game-submit, #game-entry {
     /* visibility: hidden; */
     opacity: 0.05;
     transition: visibility 0s, opacity 0.5s linear;
   }
   
-  .page-header-container:hover #header-search {
+  .page-header-container:hover #game-submit, .page-header-container:hover #game-entry {
    visibility: visible !important;
    opacity: 1 !important;
   }
@@ -72,9 +71,4 @@ body {
 .socialBtn {
     width: 96.23px;
     height: 38px;
-}
-
-.matt {
-    height: 100px;
-    width: 100px;
 }
