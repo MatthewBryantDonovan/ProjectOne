@@ -20,6 +20,7 @@ function getGame() {
     getGameWebs(game);
 };
 
+
 function getGameWebs(game) {
     var currentGame = game;
 
