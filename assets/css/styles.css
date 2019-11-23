@@ -15,6 +15,17 @@ body {
     bottom: 5%;
 }
 
+#game-submit, #game-entry {
+    /* visibility: hidden; */
+    opacity: 0.05;
+    transition: visibility 0s, opacity 0.5s linear;
+  }
+  
+  .page-header-container:hover #game-submit, .page-header-container:hover #game-entry {
+   visibility: visible !important;
+   opacity: 1 !important;
+  }
+
 .buttonDiv {
    z-index: 50;
 }

@@ -11,6 +11,7 @@ function getGame() {
     getGameWebs(game);
 };
 
+
 function getGameWebs(game) {
     $("#carouselExampleFade").show();
 
