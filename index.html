@@ -23,6 +23,7 @@
         </form>
     </nav>
 
+<<<<<<< HEAD
     <div class="container-flex buttonField">
         <div class="row">
             <div class="col-sm">
@@ -33,19 +34,80 @@
             </div>
             <div class="col-sm">
                 <button type="button" class="socialBtn official btn btn-outline-dark">Official</button>
+=======
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+            
+        <div class="container-fluid">
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+                
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-interval="5000">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/6hgVihWjK2c?rel=0" allowfullscreen></iframe>
+                    </div>
+              </div>
+              <div class="carousel-item" data-interval="5000">
+                    <div id="twitch-embed" class="embed-responsive embed-responsive-16by9">
+>>>>>>> 285d930646ee3e9cd29ec90d54b74131864bfb62
             </div>
-            <div class="col-sm">
-                <button type="button" class="socialBtn twitch btn btn-outline-dark"></button>
+              </div>
+              <div class="carousel-item" data-interval="5000">
+                <img src="https://media.playstation.com/is/image/SCEA/marvels-spider-man-screen-08-ps4-us-30mar18?$native_nt$" id="thirdSlide" class="d-block w-100" alt="...">
+              </div>
             </div>
-            <div class="col-sm">
-                <button type="button" class="socialBtn youtube btn btn-outline-dark"></button>
-            </div>
-        </div>
-    </div>
+            <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+            <div class="container-flex buttonField buttonDiv">
+                    <div class="row">
+                        <div class="col-sm">
+                            <a href="https://twitter.com" target="_blank" class="socialBtn twitter btn"></a>
+                        </div>
+                        <div class="col-sm">
+                            <a href="https://facebook.com" target="_blank" class="socialBtn facebook btn"></a>
+                        </div>
+                        <div class="col-sm">
+                            <a href="https://google.com" target="_blank"
+                                class="socialBtn official btn btn-outline-light">Official</a>
+                        </div>
+                        <div class="col-sm">
+                            <a href="https://twitch.com" target="_blank" class="socialBtn twitch btn"></a>
+                        </div>
+                        <div class="col-sm">
+                            <a href="https://youtube.com" target="_blank" class="socialBtn youtube btn"></a>
+                        </div>
+                    </div>
+                </div>
+          </div>
+</div>
 
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+        
+          <script type="text/javascript">
+            new Twitch.Embed("twitch-embed", {
+              width: 854,
+              height: 480,
+              layout: "video",
+              channel: "monstercat"
+            });
+          </script>
+
+    
+
+
+
+
+    <script src="assets/javascript/app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
     </script>
@@ -53,8 +115,6 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-    <script src="assets/javascript/app.js"></script>
 </body>
 
 </html>
