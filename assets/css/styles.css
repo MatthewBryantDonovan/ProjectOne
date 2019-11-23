@@ -8,7 +8,6 @@ body {
     background-color: #090b3d;
 }
 
-//test
 
 .buttonField {
     width: 80%;
@@ -16,6 +15,17 @@ body {
     left: 10%;
     bottom: 5%;
 }
+
+#header-search {
+    /* visibility: hidden; */
+    opacity: 0.05;
+    transition: visibility 0s, opacity 0.5s linear;
+  }
+  
+  .page-header-container:hover #header-search {
+   visibility: visible !important;
+   opacity: 1 !important;
+  }
 
 .buttonDiv {
    z-index: 50;
