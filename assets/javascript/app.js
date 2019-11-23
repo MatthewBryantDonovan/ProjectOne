@@ -7,6 +7,7 @@ userInput.addEventListener("keyup", function (event) {
         document.getElementById("game-submit").click();
     }
 });
+//change
 
 function getGame() {
     var game = "";
