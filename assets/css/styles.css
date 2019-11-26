@@ -15,6 +15,35 @@ body {
     bottom: 5%;
 }
 
+#game-submit, #game-entry {
+    /* visibility: hidden; */
+    opacity: 0.05;
+    transition: visibility 0s, opacity 0.5s linear;
+  }
+  
+  .page-header-container:hover #game-submit, .page-header-container:hover #game-entry {
+   visibility: visible !important;
+   opacity: 1 !important;
+  }
+
+.buttonDiv {
+   z-index: 50;
+}
+
+.carousel-control-prev{
+    height:0;
+    top:50%;
+}
+
+.carousel-control-next{
+    height:0;
+    top:50%;
+}
+
+.searchDiv {
+    z-index: 51;
+}
+
 .twitter {
     background-image: url("../images/twitterFull.jpg");
     background-size: 96.23px 38px;
@@ -42,9 +71,4 @@ body {
 .socialBtn {
     width: 96.23px;
     height: 38px;
-}
-
-.matt {
-    height: 100px;
-    width: 100px;
 }
