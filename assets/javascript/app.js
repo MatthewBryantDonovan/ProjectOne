@@ -105,25 +105,88 @@ function getGameWebs(game) {
             }
         }
 
+        // FIXME: start of twitch xml call
+        
+         var XML = new XMLHttpRequest();
+         var response = null;
+         var x_query_game = "https://api.twitch.tv/helix/games?name=" + currentGame;
+
+
+         XML.open("GET", x_query_game);
+         XML.setRequestHeader('Client-ID', 'ynhtm2667o42ij79qpienqgfg5jbzr');
+         XML.send();
+         XML.onload = function () {
+             response = JSON.parse(XML.response);
+             let x_query_id = "https://api.twitch.tv/helix/streams/?game_id=" + response.data[0].id;
+             XML.open("GET", x_query_id);
+             XML.setRequestHeader('Client-ID', 'ynhtm2667o42ij79qpienqgfg5jbzr');
+             XML.send();
+             XML.onload = function() {
+                response = JSON.parse(XML.response);
+                console.log(response);
+
+                if (response.data.length != 0) {
+                    itemNo = 0;
+                    for (var index = 0; index < response.data.length; index++) {
+                        
+                        if (itemNo < 5) {
+                            $(".Slide" + (index+1)  + "iframe").attr("src", "https://embed.twitch.tv?channel='" + response.data[index].user_name + "'&layout=video"); 
+                           console.log(response.data[index].user_name);
+                            // new Twitch.Embed("twitch-embed" + (index+1), {
+                            //     width: 854,
+                            //     height: 480,
+                            //     layout: "video",
+                            //     channel: "'" + response.data[index].user_name + "'",                                                         
+                            //   });
+
+                            itemNo++;
+
+                        }
+                    }
+                }
+                
+             }
+         }
+ 
+
+
         //TODO: use this info later for rawg API stuff
         currentGameID = response.results[0].id;
 
     });
 
-
-    /* var XML = new XMLHttpRequest();
-    var response = null;
-
-    XML.open("GET", "https://api.twitch.tv/helix/streams/?game_id=33214");
-    XML.setRequestHeader('Client-ID', 'ynhtm2667o42ij79qpienqgfg5jbzr');
-    XML.send();
-    XML.onload = function () {
-        response = JSON.parse(XML.response);
-        console.log(response);
-
-    }
- */
+ 
 };
+
+function showTwitch() {
+    hideImg();
+    for (let index = 0; index < 5; index++) {
+        $(".Slide" + (index + 1) + "iframe").show();
+        $(".Slide" + (index + 1) + "twitch").hide();
+        console.log(index);
+    }    
+    
+}
+
+function hideImg() {
+    // $("img").attr("src", "").css("opacity", 0);
+    // $("img").hide();
+    $("img").css({
+        position: "absolute",
+        top: "-99999999px",
+        left: "-9999999999999px"
+    });
+}
+
+function showImg() {
+    // $("img").attr("src", "").css("opacity", 0);
+    // $("img").hide();
+    $("img").css({
+        position: "initial",
+        top: "0",
+        left: "o"
+    });
+}
 
 $("#carouselExampleFade").hide();
 $(".car1").attr("class", "car1");
@@ -136,3 +199,5 @@ $(".car4").attr("class", "car4");
 $(".car4").hide();
 $(".car5").attr("class", "car5");
 $(".car5").hide();
+
+

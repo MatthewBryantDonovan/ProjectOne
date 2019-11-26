@@ -72,3 +72,7 @@ body {
     width: 96.23px;
     height: 38px;
 }
+
+iframe {
+    height: 80vh;
+}
