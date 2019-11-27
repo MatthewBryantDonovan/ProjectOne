@@ -105,6 +105,23 @@ function getGameWebs(game) {
             }
         }
 
+        $.ajax({
+            type: "get",
+            url: "https://www.googleapis.com/youtube/v3/search?part=snippet&q=" + currentGame + "&type=videos&key=AIzaSyDhIq2RbDOejDvlF0ihBgO92LTwp6I1U28",
+            success: function (data1) {
+                console.log(data1);
+                /* console.log(data1.items[index].id.videoId); */
+    
+                itemNo = 0;
+                for (var index = 0; index < data1.items.length; index++) {
+    
+                    if (itemNo < 5) {
+                        $(".Slide" + (index + 1) + "youtube").attr("src", "https://www.youtube.com/embed/" + data1.items[index].id.videoId);
+                        itemNo++;
+                    }
+                }
+            }
+        });
         // FIXME: start of twitch xml call
         
          var XML = new XMLHttpRequest();
