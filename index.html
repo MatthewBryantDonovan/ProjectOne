@@ -28,6 +28,7 @@
     <script src="https://embed.twitch.tv/embed/v1.js"></script>
 
     <div class="container-fluid">
+        <h3 id="game-score"></h3>
         <div class="hi8 w-100"></div>
         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
 
@@ -74,9 +75,9 @@
                     <div class="col-sm">
                         <a href="#" class="socialBtn facebook btn"></a>
                     </div>
-                    <div class="col-sm">
-                        <a href="#" onclick="runImg()"
-                            class="socialBtn official btn btn-outline-light">Official</a>
+                    <div class="col-sm" onclick="runImg()">
+                        <a href="#" 
+                            class="socialBtn official btn btn-outline-light">Pics</a>
                     </div>
                     <div class="col-sm" id="twitch-btn" onclick="runTwitch()">
                         <a href="#" class="socialBtn twitch btn"></a>
