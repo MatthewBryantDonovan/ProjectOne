@@ -14,7 +14,7 @@
 <body>
 
         
-    <nav class="navbar navbar-custom">
+    <nav class="navbar navbar-custom hi8 w-100">
         <a class="navbar-brand">
             <h2>VG Hypeman</h2>
         </a>
@@ -28,40 +28,34 @@
     <script src="https://embed.twitch.tv/embed/v1.js"></script>
 
     <div class="container-fluid">
+        <div class="hi8 w-100"></div>
         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
 
             <div class="carousel-inner">
                 <div class="carousel-item active car1" data-interval="5000">
-                    <img src="" class="Slide1 Slide1img d-block w-100" alt="...">
-                    <iframe class="embed-responsive-item Slide1 Slide1iframe w-100" src="" allowfullscreen></iframe>
-                    <div id="twitch-embed1" class="Slide1 Slide1twitch embed-responsive embed-responsive-16by9">
-                    </div>
+                    <img src="" class="Slide1 Slide1img d-block w-100 car-img" alt="...">
+                    <iframe class="embed-responsive-item Slide1 Slide1iframe w-100 car-twitch" src="" allowfullscreen></iframe>
+                    <iframe class="embed-responsive-item Slide1 Slide1youtube w-100 car-youtube" src="" allowfullscreen></iframe>
                 </div>
                 <div class="carousel-item car2" data-interval="5000">
-                    <img src="" class="Slide2 Slide2img d-block w-100" alt="...">
-                    <iframe class="embed-responsive-item Slide2 Slide2iframe  w-100" src="" allowfullscreen></iframe>
-                    <div id="twitch-embed2" class="Slide2 Slide2twitch embed-responsive embed-responsive-16by9">
-                    </div>
+                    <img src="" class="Slide2 Slide2img d-block w-100 car-img" alt="...">
+                    <iframe class="embed-responsive-item Slide2 Slide2iframe w-100 car-twitch" src="" allowfullscreen></iframe>
+                    <iframe class="embed-responsive-item Slide2 Slide2youtube w-100 car-youtube" src="" allowfullscreen></iframe>
                 </div>
                 <div class="carousel-item car3" data-interval="5000">
-                    <img src="" class="Slide3 Slide3img d-block w-100" alt="...">
-                    <iframe class="embed-responsive-item Slide3 Slide3iframe w-100" src="" allowfullscreen></iframe>
-                    <div id="twitch-embed3" class="Slide3 Slide3twitch embed-responsive embed-responsive-16by9">
-                    </div>
+                    <img src="" class="Slide3 Slide3img d-block w-100 car-img" alt="...">
+                    <iframe class="embed-responsive-item Slide3 Slide3iframe w-100 car-twitch" src="" allowfullscreen></iframe>
+                    <iframe class="embed-responsive-item Slide3 Slide3youtube w-100 car-youtube" src="" allowfullscreen></iframe>
                 </div>
                 <div class="carousel-item car4" data-interval="5000">
-                    <img src="" class="Slide4 Slide4img d-block w-100" alt="...">
-                    <iframe class="embed-responsive-item Slide4 Slide4iframe w-100" src="" allowfullscreen></iframe>
-                    <div id="twitch-embed4" class="Slide4 Slide4twitch embed-responsive embed-responsive-16by9">
-                    </div>
-
+                    <img src="" class="Slide4 Slide4img d-block w-100 car-img" alt="...">
+                    <iframe class="embed-responsive-item Slide4 Slide4iframe w-100 car-twitch" src="" allowfullscreen></iframe>
+                    <iframe class="embed-responsive-item Slide4 Slide4youtube w-100 car-youtube" src="" allowfullscreen></iframe>
                 </div>
                 <div class="carousel-item car5" data-interval="5000">
-                    <img src="" class="Slide5 Slide5img d-block w-100" alt="...">
-                    <iframe class="embed-responsive-item Slide5 Slide5iframe w-100" src="" allowfullscreen></iframe>
-                    <div id="twitch-embed5" class="Slide5 Slide5twitch embed-responsive embed-responsive-16by9">
-                    </div>
-
+                    <img src="" class="Slide5 Slide5img d-block w-100 car-img" alt="...">
+                    <iframe class="embed-responsive-item Slide5 Slide5iframe w-100 car-twitch" src="" allowfullscreen></iframe>
+                    <iframe class="embed-responsive-item Slide5 Slide5youtube w-100 car-youtube" src="" allowfullscreen></iframe>
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
@@ -74,25 +68,26 @@
             </a>
             <div class="container-flex buttonField buttonDiv">
                 <div class="row">
-                    <div class="col-sm" onclick="showImg()">
+                    <div class="col-sm">
                         <a href="#" class="socialBtn twitter btn"></a>
                     </div>
                     <div class="col-sm">
-                        <a href="https://facebook.com" target="_blank" class="socialBtn facebook btn"></a>
+                        <a href="#" class="socialBtn facebook btn"></a>
                     </div>
                     <div class="col-sm">
-                        <a href="#" onclick="hideImg()"
+                        <a href="#" onclick="runImg()"
                             class="socialBtn official btn btn-outline-light">Official</a>
                     </div>
-                    <div class="col-sm" id="twitch-btn" onclick="showTwitch()">
+                    <div class="col-sm" id="twitch-btn" onclick="runTwitch()">
                         <a href="#" class="socialBtn twitch btn"></a>
                     </div>
-                    <div class="col-sm">
-                        <a href="https://youtube.com" target="_blank" class="socialBtn youtube btn"></a>
+                    <div class="col-sm" onclick="runYoutube()">
+                        <a href="#" class="socialBtn youtube btn"></a>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="hi8 w-100"></div>
     </div>
 
 
