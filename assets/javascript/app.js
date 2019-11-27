@@ -136,74 +136,88 @@ function getGameWebs(game) {
             }
         }
 
-        // FIXME: start of twitch xml call
-
-        var XML = new XMLHttpRequest();
-
-        var x_query_game = "https://api.twitch.tv/helix/games?name=" + (data0.results[0].name);
-        console.log(x_query_game);
-        
-
-        XML.open("GET", x_query_game);
-        XML.setRequestHeader('Client-ID', 'ynhtm2667o42ij79qpienqgfg5jbzr');
-        XML.send();
-        XML.onload = function () {
-            response = JSON.parse(XML.response);
-            console.log(response);
-
-
-            if (response.data.length != 0) {
-                let x_query_id = "https://api.twitch.tv/helix/streams/?game_id=" + response.data[0].id;
-                XML.open("GET", x_query_id);
-                XML.setRequestHeader('Client-ID', 'ynhtm2667o42ij79qpienqgfg5jbzr');
-                XML.send();
-                XML.onload = function () {
-                    response = JSON.parse(XML.response);
-                    console.log(response);
-
-                    if (response.data.length != 0) {
-                        itemNo = 0;
-                        for (var index = 0; index < response.data.length; index++) {
-
-                            if (itemNo < 5) {
-                                $(".Slide" + (index + 1) + "iframe").attr("src", "https://embed.twitch.tv?channel='" + response.data[index].user_name + "'&layout=video");
-                                console.log(response.data[index].user_name);
-                                // new Twitch.Embed("twitch-embed" + (index+1), {
-                                //     width: 854,
-                                //     height: 480,
-                                //     layout: "video",
-                                //     channel: "'" + response.data[index].user_name + "'",                                                         
-                                //   });
-
-                                itemNo++;
-
-                            }
-                        }
-                    }
-
-                }
-            }
-        }
-
-
-
         //TODO: use this info later for rawg API stuff
         currentGameID = data0.results[0].id;
 
+        //Giantbomb call for name to give to twitch
+        $.ajax({
+            type: 'GET',
+            dataType: 'jsonp',
+            crossDomain: true,
+            jsonp: 'json_callback',
+            url: 'http://www.giantbomb.com/api/search/?format=jsonp&api_key=6ce9922ee0247c661db0e2af89818c4e9441b306&query=' + data0.results[0].name,
+        }).done(function (gbdata) {
+            console.log(gbdata);
+            console.log(gbdata.results[0].name);
+            // FIXME: start of twitch xml call
 
-        
-        //FIXME: trying stuff
-                // var x_query_game2 = "https://api.twitch.tv/helix/games/?name=Pokémon%20Sword%2FShield" /* + (data0.results[0].name) */;
-                // XML.open("GET", x_query_game2);
-                // XML.setRequestHeader('Client-ID', 'ynhtm2667o42ij79qpienqgfg5jbzr');
-                // XML.send();
-                // XML.onload = function () {
-                //     response = JSON.parse(XML.response);
-                //     console.log(response);
-                //     console.log("I DID IT!");
-                    
-                // }
-        //FIXME: trying stuff
+            var XML = new XMLHttpRequest();
+
+            var x_query_game = "https://api.twitch.tv/helix/games?name=" + (gbdata.results[0].name);
+            console.log(x_query_game);
+
+
+            XML.open("GET", x_query_game);
+            XML.setRequestHeader('Client-ID', 'ynhtm2667o42ij79qpienqgfg5jbzr');
+            XML.send();
+            XML.onload = function () {
+                response = JSON.parse(XML.response);
+                console.log(response);
+
+
+                if (response.data.length != 0) {
+                    let x_query_id = "https://api.twitch.tv/helix/streams/?game_id=" + response.data[0].id + "&first=5";
+                    XML.open("GET", x_query_id);
+                    XML.setRequestHeader('Client-ID', 'ynhtm2667o42ij79qpienqgfg5jbzr');
+                    XML.send();
+                    XML.onload = function () {
+                        response = JSON.parse(XML.response);
+                        console.log(response);
+
+                        if (response.data.length != 0) {
+                            itemNo = 0;
+                            for (var index = 0; index < response.data.length; index++) {
+
+                                if (itemNo < 5) {
+                                    $(".Slide" + (index + 1) + "iframe").attr("src", "https://embed.twitch.tv?channel='" + response.data[index].user_name + "'&layout=video");
+                                    console.log(response.data[index].user_name);
+                                    // new Twitch.Embed("twitch-embed" + (index+1), {
+                                    //     width: 854,
+                                    //     height: 480,
+                                    //     layout: "video",
+                                    //     channel: "'" + response.data[index].user_name + "'",                                                         
+                                    //   });
+
+                                    itemNo++;
+
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+
+
+            //FIXME: trying stuff start
+            // $.ajax({
+            //     type: 'GET',
+            //     dataType: 'jsonp',
+            //     crossDomain: true,
+            //     jsonp: 'json_callback',
+            //     url: 'http://www.giantbomb.com/api/reviews/?format=jsonp&api_key=6ce9922ee0247c661db0e2af89818c4e9441b306&limit=5' + gbdata.results[0].guid,
+            // }).done(function (gbrev) {
+            //     console.log(gbrev);
+            // }).fail(function () {
+            //     console.log("error");
+
+            // })
+            //FIXME: tyring stuff end 
+        }).fail(function () {
+            console.log("error");
+
+        })
+
     });
 
 
