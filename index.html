@@ -6,85 +6,120 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"/>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
-    
     <link href="assets/css/styles.css" rel="stylesheet">
     <title>VG Hypeman</title>
 </head>
 
 <body>
-        <div class="container">
-
-        
-    <nav class="navbar navbar-custom hi8  ">
-        <a class="navbar-brand">
+    <nav id="hi8">
+        <div class="nav-wrapper">
+            <a href="#" class="left brand-logo">VG Hypeman</a>
+            <ul id="nav-mobile" class="right">
+                <li><input id="game-entry" class="form-control mr-sm-2" type="search" placeholder="Search"
+                        aria-label="Search"></li>
+                <li><button id="game-submit" class="btn btn-outline-primary my-2 my-sm-0" type="submit"
+                        onclick="getGame()">Search</button></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- <div class="hi8">
+        <a class="">
             <h2>VG Hypeman</h2>
         </a>
-        <form class="form-inline page-header-container">
+        <form class="">
             <input id="game-entry" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button id="game-submit" class="btn btn-outline-primary my-2 my-sm-0" type="submit"
                 onclick="getGame()">Search</button>
         </form>
-    </nav>
+    </div> -->
+    <div class="container">
 
-    <script src="https://embed.twitch.tv/embed/v1.js"></script>
 
-    
-        <div class="hi8  "></div>
-        <!-- <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel"> -->
 
-            <div class="carousel-inner single-item">
-                <div class="carousel-item active car1" data-interval="5000">
-                    <img src="" class="Slide1 Slide1img d-block car-img" alt="...">
-                    <iframe class="embed-responsive-item Slide1 Slide1iframe   car-twitch" src="" allowfullscreen></iframe>
-                    <iframe class="embed-responsive-item Slide1 Slide1youtube   car-youtube" src="" allowfullscreen></iframe>
+        <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+
+        <div id="hi8">
+            <div class="row">
+                <!-- <div class="col s6 m3 center">
+                    <span id="game-name" class="flow-text"></span>
                 </div>
-                <div class="carousel-item car2" data-interval="5000">
-                    <img src="" class="Slide2 Slide2img d-block   car-img" alt="...">
-                    <iframe class="embed-responsive-item Slide2 Slide2iframe   car-twitch" src="" allowfullscreen></iframe>
-                    <iframe class="embed-responsive-item Slide2 Slide2youtube   car-youtube" src="" allowfullscreen></iframe>
+                <div class="col s6 m3 center">
+                    <span id="game-platforms" class="flow-text"></span>
                 </div>
-                <div class="carousel-item car3" data-interval="5000">
-                    <img src="" class="Slide3 Slide3img d-block   car-img" alt="...">
-                    <iframe class="embed-responsive-item Slide3 Slide3iframe   car-twitch" src="" allowfullscreen></iframe>
-                    <iframe class="embed-responsive-item Slide3 Slide3youtube   car-youtube" src="" allowfullscreen></iframe>
+                <div class="col s6 m3 center hide-on-med-and-down">
+                    <span id="game-released" class="flow-text"></span>
                 </div>
-                <div class="carousel-item car4" data-interval="5000">
-                    <img src="" class="Slide4 Slide4img d-block   car-img" alt="...">
-                    <iframe class="embed-responsive-item Slide4 Slide4iframe   car-twitch" src="" allowfullscreen></iframe>
-                    <iframe class="embed-responsive-item Slide4 Slide4youtube   car-youtube" src="" allowfullscreen></iframe>
-                </div>
-                <div class="carousel-item car5" data-interval="5000">
-                    <img src="" class="Slide5 Slide5img d-block   car-img" alt="...">
-                    <iframe class="embed-responsive-item Slide5 Slide5iframe   car-twitch" src="" allowfullscreen></iframe>
-                    <iframe class="embed-responsive-item Slide5 Slide5youtube   car-youtube" src="" allowfullscreen></iframe>
-                </div>
+                <div class="col s6 m3 center hide-on-med-and-down">
+                    <span id="game-genres" class="flow-text"></span>
+                </div> -->
+                <span id="game-name" class="flow-text left hide-on-small-only game-name"></span>
+                <span id="game-platforms" class="flow-text right hide-on-small-only"></span>
+                <span id="game-name" class="flow-text center show-on-small hide-on-med-and-up game-name"></span>
+                <!-- <span id="game-released" class="flow-text"></span>
+                        <span id="game-genres" class="flow-text"></span> -->
             </div>
-            <div class="container buttonField buttonDiv center-align">
-                <div class="row center-align">
-                    <div class="col 1s" onclick="runImg()">
-                        <a href="#" 
-                            class="socialBtn official btn btn-outline-light">Pics</a>
-                    </div>
-                    <div class="col 1s" id="twitch-btn" onclick="runTwitch()">
-                        <a href="#" class="socialBtn twitch btn"></a>
-                    </div>
-                    <div class="col 1s" onclick="runYoutube()">
-                        <a href="#" class="socialBtn youtube btn"></a>
-                    </div>
+        </div>
+
+        <div id="w100" class="carousel-inner single-item">
+            <div class="carousel-item active car1" data-interval="5000">
+                <img src="" class="Slide1 Slide1img d-block car-img" alt="...">
+                <iframe class="embed-responsive-item Slide1 Slide1iframe   car-twitch" src="" allowfullscreen></iframe>
+                <iframe class="embed-responsive-item Slide1 Slide1youtube   car-youtube" src=""
+                    allowfullscreen></iframe>
+            </div>
+            <div class="carousel-item car2" data-interval="5000">
+                <img src="" class="Slide2 Slide2img d-block   car-img" alt="...">
+                <iframe class="embed-responsive-item Slide2 Slide2iframe   car-twitch" src="" allowfullscreen></iframe>
+                <iframe class="embed-responsive-item Slide2 Slide2youtube   car-youtube" src=""
+                    allowfullscreen></iframe>
+            </div>
+            <div class="carousel-item car3" data-interval="5000">
+                <img src="" class="Slide3 Slide3img d-block   car-img" alt="...">
+                <iframe class="embed-responsive-item Slide3 Slide3iframe   car-twitch" src="" allowfullscreen></iframe>
+                <iframe class="embed-responsive-item Slide3 Slide3youtube   car-youtube" src=""
+                    allowfullscreen></iframe>
+            </div>
+            <div class="carousel-item car4" data-interval="5000">
+                <img src="" class="Slide4 Slide4img d-block   car-img" alt="...">
+                <iframe class="embed-responsive-item Slide4 Slide4iframe   car-twitch" src="" allowfullscreen></iframe>
+                <iframe class="embed-responsive-item Slide4 Slide4youtube   car-youtube" src=""
+                    allowfullscreen></iframe>
+            </div>
+            <div class="carousel-item car5" data-interval="5000">
+                <img src="" class="Slide5 Slide5img d-block   car-img" alt="...">
+                <iframe class="embed-responsive-item Slide5 Slide5iframe   car-twitch" src="" allowfullscreen></iframe>
+                <iframe class="embed-responsive-item Slide5 Slide5youtube   car-youtube" src=""
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div id="hi8">
+            <div class="row">
+                <span id="game-released" class="flow-text col s3 left hide-on-med-and-down"></span>
+                <span id="game-genres" class="flow-text right hide-on-med-and-down"></span>
+                <div id="picsBTN" class="col l2 m4 s4 center" onclick="runImg()">
+                    <a href="#" class="socialBtn official btn btn-outline-light">Pics</a>
+                </div>
+                <div id="twitchBTN" class="col l2 m4 s4 center" id="twitch-btn" onclick="runTwitch()">
+                    <a href="#" class="socialBtn twitch btn"></a>
+                </div>
+                <div id="youtubeBTN" class="col l2 m4 s4 center" onclick="runYoutube()">
+                    <a href="#" class="socialBtn youtube btn"></a>
                 </div>
             </div>
         </div>
-        <div class="hi8  "></div>
+
     </div>
-
-
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js">
+    </script>
     <script src="assets/javascript/app.js"></script>
 
 </body>
