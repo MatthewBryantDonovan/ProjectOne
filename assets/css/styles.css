@@ -1,11 +1,18 @@
 body {
     /* background-color: lightgrey; */
+    margin: 0;
+    padding: 0;
     background-image: url("../images/placeholderBackground.jpg");
     color: white;
 }
 
+.container {
+    width: 100vw;
+}
+
 .navbar-custom {
     background-color: #090b3d;
+    width: 100%;
 }
 
 .buttonField {
@@ -15,12 +22,21 @@ body {
     bottom: 5%;
 }
 
+#game-entry {
+    width: 68%;
+    display: block;
+}
+
 #game-submit, #game-entry {
     /* visibility: hidden; */
     opacity: 0.05;
     transition: visibility 0s, opacity 0.5s linear;
   }
   
+  .page-header-container {
+      width: 100%;
+  }
+
   .page-header-container:hover #game-submit, .page-header-container:hover #game-entry {
    visibility: visible !important;
    opacity: 1 !important;
@@ -74,12 +90,14 @@ body {
 }
 
 iframe {
-    height: 75vh;
+    height: 74vh;
+    width: 100%;
     border: 2px solid white;
 }
 
 img {
-    height: 75vh;
+    height: 74vh;
+    width: 100%;
     border: 2px solid white;
 }
 
