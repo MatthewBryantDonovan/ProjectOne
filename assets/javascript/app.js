@@ -1,3 +1,7 @@
+$(".single-item").slick({
+    dots: true
+});
+
 var currentGameID = 0;
 
 function getGame() {
@@ -30,24 +34,6 @@ function getGameWebs(game) {
 
     var currentGame = game;
 
-       // get and disp metacritic score
-
-       var settings = {
-        "async": true,
-        "crossDomain": true,
-        "url": "https://chicken-coop.p.rapidapi.com/games/" + currentGame +"?platform=pc",
-        "method": "GET",
-        "headers": {
-            "x-rapidapi-host": "chicken-coop.p.rapidapi.com",
-            "x-rapidapi-key": "fd02da23cemshd88b3aca85d6883p167846jsnc7607179e7e1"
-        }
-    }
-    
-    $.ajax(settings).done(function (res) {
-        console.log(res.result.score);
-        $("#game-score").text("Metacritic Score: " + res.result.score);
-
-    });
     // var hasBG = false;
 
     var queryURL = "https://api.rawg.io/api/games?search=" + currentGame;
@@ -340,22 +326,6 @@ function showYoutube() {
     });
 }
 
-// $("#game-submit").on("click", function () {
-//     var settings = {
-//         "async": true,
-//         "crossDomain": true,
-//         "url": "https://chicken-coop.p.rapidapi.com/games/" + currentGame +"?platform=pc",
-//         "method": "GET",
-//         "headers": {
-//             "x-rapidapi-host": "chicken-coop.p.rapidapi.com",
-//             "x-rapidapi-key": "fd02da23cemshd88b3aca85d6883p167846jsnc7607179e7e1"
-//         }
-//     }
-    
-//     $.ajax(settings).done(function (res) {        
-//         $("#game-score").html("Metacritic Score: " + "<span style=(color: purple;)" + res.result.score + "</span>");
-//     });
-// });
 
 $("#carouselExampleFade").hide();
 $(".car1").attr("class", "car1");
