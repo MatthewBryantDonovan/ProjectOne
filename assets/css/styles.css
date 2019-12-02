@@ -1,59 +1,9 @@
 body {
     /* background-color: lightgrey; */
+    margin: 0;
+    padding: 0;
     background-image: url("../images/placeholderBackground.jpg");
     color: white;
-}
-
-.navbar-custom {
-    background-color: #090b3d;
-}
-
-.buttonField {
-    width: 80%;
-    position: absolute;
-    left: 10%;
-    bottom: 5%;
-}
-
-#game-submit, #game-entry {
-    /* visibility: hidden; */
-    opacity: 0.05;
-    transition: visibility 0s, opacity 0.5s linear;
-  }
-  
-  .page-header-container:hover #game-submit, .page-header-container:hover #game-entry {
-   visibility: visible !important;
-   opacity: 1 !important;
-  }
-
-.buttonDiv {
-   z-index: 50;
-}
-
-.carousel-control-prev{
-    height:0;
-    top:50%;
-}
-
-.carousel-control-next{
-    height:0;
-    top:50%;
-}
-
-.searchDiv {
-    z-index: 51;
-}
-
-.twitter {
-    background-image: url("../images/twitterFull.jpg");
-    background-size: 96.23px 38px;
-    /* background-repeat: no-repeat; */
-}
-
-.facebook {
-    background-image: url("../images/fbFull.png");
-    background-size: 96.23px 38px;
-    /* background-repeat: no-repeat; */
 }
 
 .twitch {
@@ -73,21 +23,54 @@ body {
     height: 38px;
 }
 
-iframe {
-    height: 74vh;
-    border: 2px solid white;
-}
-
+iframe,
 img {
     height: 74vh;
+    width: 100%;
     border: 2px solid white;
 }
-
-.hi8 {
-    height: 8vh;
+#hi8{
+    height: 6.75vh;
+    width: 100%;
+    overflow: hidden;
+}
+.container {
     width: 100vw;
+}
+
+body {
     background: black;
 }
-body{
-    background: black;
+
+.slick-active {
+    background: white;
+}
+
+#slick-slide-control00,
+#slick-slide-control01,
+#slick-slide-control02,
+#slick-slide-control03,
+#slick-slide-control04 {
+    background: white;
+    color: green;
+}
+
+button {
+    color: green;
+}
+
+.carousel-inner, #picsBTN, #youtubeBTN, #twitchBTN {
+    visibility: hidden;
+}
+
+.slick-prev {
+    position: absolute;
+    left: 0.25vw;
+    z-index: 5;
+}
+
+.slick-next {
+    position: absolute;
+    right: 0.25vw;
+    z-index: 5;
 }
