@@ -20,6 +20,11 @@ body {
     bottom: 5%;
 }
 
+.mainContent {
+    width: 1000px;
+    height: 500px;
+}
+
 #game-submit, #game-entry {
     /* visibility: hidden; */
     opacity: 0.05;
