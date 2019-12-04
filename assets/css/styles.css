@@ -21,6 +21,7 @@ img {
     width: 100%;
     border: 2px solid white;
 }
+
 #hi8{
     height: 6.75vh;
     width: 100%;
@@ -90,4 +91,8 @@ button {
 
 #game-entry {
     color: white;
+}
+
+span {
+    color: #ffffff;
 }

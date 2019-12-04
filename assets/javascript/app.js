@@ -18,7 +18,8 @@ function getGame() {
     $("#game-entry").val("");
     getGameWebs(game);
     
-    $("#instructions-img").hide();
+    $(".car-intro").remove();
+    $(".slick-arrow").show();
     runImg();
 };
 
@@ -399,3 +400,4 @@ $(".car4").attr("class", "car4");
 $(".car4").hide();
 $(".car5").attr("class", "car5");
 $(".car5").hide();
+$(".slick-arrow").hide();
