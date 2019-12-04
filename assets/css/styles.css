@@ -23,6 +23,10 @@ body {
     height: 38px;
 }
 
+span {
+    color: white;
+}
+
 iframe,
 img {
     height: 74vh;
