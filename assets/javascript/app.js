@@ -17,7 +17,15 @@ function getGame() {
     }
     $("#game-entry").val("");
     getGameWebs(game);
+    
+    // document.getElementById("game-entry").addEventListener("keyup" , function (e) { 
+    //     if(e.keyCode === 13) {
+    //         e.preventDefault();
+    //         $("#game-submit").trigger("click");
+    //     }
+    // });
 
+    runImg();
 
 };
 
@@ -160,7 +168,10 @@ function getGameWebs(game) {
                     $(".Slide" + (index + 1) + "iframe").hide();
                     $(".Slide" + (index + 1) + "youtube").hide();
 
-                    $(".Slide" + (index + 1) + "img").attr("src", "./assets/images/placeholderBackground.jpg"); //FIXME: need to put princess in another castle here
+                    $(".Slide" + (index + 1) + "img").attr({
+                        src: "./assets/images/placeholderBackground.jpg",
+                        overflow: "hidden"
+                    }); //FIXME: need to put princess in another castle here
 
                     itemNo++;
                 }
@@ -224,7 +235,10 @@ function getGameWebs(game) {
 
                                     itemNo++;
                                 } else {
-                                    $(".Slide" + (index + 1) + "iframe").attr("src", "./assets/images/placeholderBackground.jpg");
+                                    $(".Slide" + (index + 1) + "iframe").attr({
+                                        src: "./assets/images/placeholderBackground.jpg",
+                                        scrolling: "no"
+                                    });
                                     itemNo++;
                                 }
                             }
@@ -233,7 +247,10 @@ function getGameWebs(game) {
                     }
                 } else {
                     for (var index = 0; index < 5; index++) {
-                    $(".Slide" + (index + 1) + "iframe").attr("src", "./assets/images/placeholderBackground.jpg");
+                    $(".Slide" + (index + 1) + "iframe").attr({
+                        src: "./assets/images/placeholderBackground.jpg",
+                        scrolling: "no"
+                    });
                     }
 
                 }
