@@ -6,6 +6,8 @@ $(".single-item").slick({
     cssEase: 'linear'
 });
 
+
+
 var currentGameID = 0;
 
 function getGame() {
@@ -18,11 +20,26 @@ function getGame() {
     $("#game-entry").val("");
     getGameWebs(game);
 
+    $(".car-intro").remove();
+    $(".slick-arrow").show();
     runImg();
 };
 
 
 function getGameWebs(game) {
+
+    // Modal
+    $("#game-modal").show();
+    $(document).ready(function () {
+        $('.modal').modal();
+        $(".game-name").html();
+        $("#game-genres").html();
+        $("#game-platforms").html();
+        $("#game-released").html();
+        // $("$game-plot").html();
+    });
+
+
     $("#carouselExampleFade").show();
     showImg();
     showYoutube();
@@ -85,7 +102,7 @@ function getGameWebs(game) {
 
 
         //display game name
-        $(".game-name").html("Title: " + data0.results[0].name);
+        $(".game-name").html(data0.results[0].name);
 
 
 
@@ -112,8 +129,9 @@ function getGameWebs(game) {
                 }
             }
 
-            $("#game-platforms").html("Available On: " + platforms);
+            $("#game-platforms").html(platforms);
         }
+        // console.log("hello" + platforms);
 
         //displayed released date
         $("#game-released").html(moment(data0.results[0].released, "YYYY-MM-DD").format("MMM Do YYYY"));
@@ -128,7 +146,7 @@ function getGameWebs(game) {
                 }
             }
 
-            $("#game-genres").html("Genre: " + genres);
+            $("#game-genres").html(genres);
         }
 
         //display screenshots
@@ -160,7 +178,10 @@ function getGameWebs(game) {
                     $(".Slide" + (index + 1) + "iframe").hide();
                     $(".Slide" + (index + 1) + "youtube").hide();
 
-                    $(".Slide" + (index + 1) + "img").attr("src", "./assets/images/placeholderBackground.jpg"); //FIXME: need to put princess in another castle here
+                    $(".Slide" + (index + 1) + "img").attr({
+                        src: "./assets/images/placeholderBackground.jpg",
+                        overflow: "hidden"
+                    }); //FIXME: need to put princess in another castle here
 
                     itemNo++;
                 }
@@ -224,7 +245,10 @@ function getGameWebs(game) {
 
                                     itemNo++;
                                 } else {
-                                    $(".Slide" + (index + 1) + "iframe").attr("src", "./assets/images/placeholderBackground.jpg");
+                                    $(".Slide" + (index + 1) + "iframe").attr({
+                                        src: "./assets/images/placeholderBackground.jpg",
+                                        scrolling: "no"
+                                    });
                                     itemNo++;
                                 }
                             }
@@ -233,7 +257,10 @@ function getGameWebs(game) {
                     }
                 } else {
                     for (var index = 0; index < 5; index++) {
-                    $(".Slide" + (index + 1) + "iframe").attr("src", "./assets/images/placeholderBackground.jpg");
+                        $(".Slide" + (index + 1) + "iframe").attr({
+                            src: "./assets/images/placeholderBackground.jpg",
+                            scrolling: "no"
+                        });
                     }
 
                 }
@@ -379,7 +406,6 @@ function showYoutube() {
     });
 }
 
-$("#carouselExampleFade").hide();
 $(".car1").attr("class", "car1");
 $(".car1").hide();
 $(".car2").attr("class", "car2");
@@ -390,3 +416,7 @@ $(".car4").attr("class", "car4");
 $(".car4").hide();
 $(".car5").attr("class", "car5");
 $(".car5").hide();
+$(".slick-arrow").hide();
+
+
+$("#game-modal").hide();

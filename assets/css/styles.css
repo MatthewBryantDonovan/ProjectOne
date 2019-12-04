@@ -1,13 +1,5 @@
-body {
-    /* background-color: lightgrey; */
-    margin: 0;
-    padding: 0;
-    background-image: url("../images/placeholderBackground.jpg");
-    /* color: #0b0c10; */
-}
-
 .twitch {
-    background-image: url("../images/");
+    background-image: url("../images/twitchFull.png");
     background-size: 96.23px 38px;
     /* background-repeat: no-repeat; */
 }
@@ -29,6 +21,7 @@ img {
     width: 100%;
     border: 2px solid white;
 }
+
 #hi8{
     height: 6.75vh;
     width: 100%;
@@ -98,4 +91,18 @@ button {
 
 #game-entry {
     color: white;
+}
+
+span {
+    color: #ffffff;
+}
+
+.game-name {
+    text-align: center;
+    color: #ffffff;
+}
+
+.game-title {
+    text-align: left;
+    color: black;
 }
