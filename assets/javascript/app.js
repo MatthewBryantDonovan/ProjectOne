@@ -18,7 +18,7 @@ function getGame() {
     $("#game-entry").val("");
     getGameWebs(game);
 
-
+    runImg();
 };
 
 
