@@ -18,6 +18,7 @@ function getGame() {
     $("#game-entry").val("");
     getGameWebs(game);
     
+    $("#instructions-img").hide();
     runImg();
 };
 
@@ -388,7 +389,6 @@ function showYoutube() {
     });
 }
 
-$("#carouselExampleFade").hide();
 $(".car1").attr("class", "car1");
 $(".car1").hide();
 $(".car2").attr("class", "car2");
