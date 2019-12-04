@@ -15,10 +15,6 @@
     height: 38px;
 }
 
-span {
-    color: white;
-}
-
 iframe,
 img {
     height: 74vh;
@@ -37,6 +33,7 @@ img {
 
 body {
     background: black;
+    overflow: hidden;
 }
 
 .slick-active {
