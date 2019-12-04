@@ -14,9 +14,10 @@
 </head>
 
 <body>
-    <nav id="hi8">
-        <div class="nav-wrapper">
-            <a href="#" class="left brand-logo">VG Hypeman</a>
+    <!-- <nav class="black">
+        <div class="nav-wrapper black" id="hi8">
+            <img src="assets/images/VGHypemanLogo.png" id="hypPush" class="left brand-logo VGHype">
+
             <ul id="nav-mobile" class="right">
                 <li><input id="game-entry" class="form-control mr-sm-2" type="search" placeholder="Search"
                         aria-label="Search"></li>
@@ -24,7 +25,28 @@
                         onclick="getGame()">Search</button></li>
             </ul>
         </div>
-    </nav>
+    </nav> -->
+
+
+    <div class="row valign-wrapper" id="hi8">
+
+        <div class="col s4" id="VGHype2">
+            <img src="assets/images/VGHypemanLogo.png" class="VGHype">
+        </div>
+
+        <div class="col s4 offset-s2 right-align">
+            <input id="game-entry" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        </div>
+
+        <div class="col s2">
+            <button id="game-submit" class="btn grey" type="submit" onclick="getGame()">Search</button>
+        </div>
+
+    </div>
+
+
+
+
     <!-- <div class="hi8">
         <a class="">
             <h2>VG Hypeman</h2>

@@ -85,7 +85,7 @@ function getGameWebs(game) {
 
 
         //display game name
-        $(".game-name").html(data0.results[0].name);
+        $(".game-name").html("Title: " + data0.results[0].name);
 
 
 
@@ -112,7 +112,7 @@ function getGameWebs(game) {
                 }
             }
 
-            $("#game-platforms").html(platforms);
+            $("#game-platforms").html("Available On: " + platforms);
         }
 
         //displayed released date
@@ -128,7 +128,7 @@ function getGameWebs(game) {
                 }
             }
 
-            $("#game-genres").html(genres);
+            $("#game-genres").html("Genre: " + genres);
         }
 
         //display screenshots
