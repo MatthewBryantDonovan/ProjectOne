@@ -106,3 +106,7 @@ span {
     text-align: left;
     color: black;
 }
+
+#game-modal {
+    align-content: center;
+}
