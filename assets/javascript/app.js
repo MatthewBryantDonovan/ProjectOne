@@ -257,10 +257,10 @@ function getGameWebs(game) {
                     }
                 } else {
                     for (var index = 0; index < 5; index++) {
-                        $(".Slide" + (index + 1) + "iframe").attr({
-                            src: "./assets/images/placeholderBackground.jpg",
-                            scrolling: "no"
-                        });
+                    $(".Slide" + (index + 1) + "iframe").attr({
+                        src: "./assets/images/placeholderBackground.jpg",
+                        scrolling: "no"
+                    });
                     }
 
                 }
@@ -417,6 +417,4 @@ $(".car4").hide();
 $(".car5").attr("class", "car5");
 $(".car5").hide();
 $(".slick-arrow").hide();
-
-
 $("#game-modal").hide();
