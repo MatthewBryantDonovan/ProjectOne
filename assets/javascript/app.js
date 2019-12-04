@@ -6,6 +6,8 @@ $(".single-item").slick({
     cssEase: 'linear'
 });
 
+
+
 var currentGameID = 0;
 
 function getGame() {
@@ -17,7 +19,7 @@ function getGame() {
     }
     $("#game-entry").val("");
     getGameWebs(game);
-    
+
     $(".car-intro").remove();
     $(".slick-arrow").show();
     runImg();
@@ -25,6 +27,19 @@ function getGame() {
 
 
 function getGameWebs(game) {
+
+    // Modal
+    $("#game-modal").show();
+    $(document).ready(function () {
+        $('.modal').modal();
+        $(".game-name").html();
+        $("#game-genres").html();
+        $("#game-platforms").html();
+        $("#game-released").html();
+        // $("$game-plot").html();
+    });
+
+
     $("#carouselExampleFade").show();
     showImg();
     showYoutube();
@@ -116,6 +131,7 @@ function getGameWebs(game) {
 
             $("#game-platforms").html(platforms);
         }
+        // console.log("hello" + platforms);
 
         //displayed released date
         $("#game-released").html(moment(data0.results[0].released, "YYYY-MM-DD").format("MMM Do YYYY"));
@@ -401,3 +417,4 @@ $(".car4").hide();
 $(".car5").attr("class", "car5");
 $(".car5").hide();
 $(".slick-arrow").hide();
+$("#game-modal").hide();

@@ -14,6 +14,7 @@
 </head>
 
 <body>
+
     <nav id="hi8 valign-wrapper">
         <div class="nav-wrapper black">
             <div class="left hide-on-small-only" id="VGHlogo"></div>
@@ -29,6 +30,46 @@
         </div>
 
     </nav>
+
+    <div class="row">
+        <div class="col s12 align-center">
+            <h4 class="game-name"></h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12 align-center modalCol">
+            <!-- Modal Area -->
+            <!-- Modal Trigger -->
+            <a id="game-modal" class="waves-effect waves-light btn modal-trigger" href="#modal1">Additional Game
+                Info</a>
+        </div>
+    </div>
+
+
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h3>VGHypeman Game Info</h3>
+            <h5>Title: </h5>
+            <h6 class="game-name game-title"></h6>
+            <h5>Genre: </h5>
+            <h6 id="game-genres"></h6>
+            <h5>Available On: </h5>
+            <h6 id="game-platforms"></h6>
+            <h5>Release Date: </h5>
+            <h6 id="game-released"></h6>
+            <!-- <h5>Plot: </h5>
+            <h6 id="game-plot"></h6> -->
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+
+
+
+
     <!-- <div class="hi8">
         <a class="">
             <h2>VG Hypeman</h2>
@@ -60,9 +101,9 @@
                 <div class="col s6 m3 center hide-on-med-and-down">
                     <span id="game-genres" class="flow-text"></span>
                 </div> -->
-                <span id="game-name" class="flow-text left hide-on-small-only game-name"></span>
+                <!-- <span id="game-name" class="flow-text left hide-on-small-only game-name"></span>
                 <span id="game-platforms" class="flow-text right hide-on-small-only"></span>
-                <span id="game-name" class="flow-text center show-on-small hide-on-med-and-up game-name"></span>
+                <span id="game-name" class="flow-text center show-on-small hide-on-med-and-up game-name"></span> -->
                 <!-- <span id="game-released" class="flow-text"></span>
                         <span id="game-genres" class="flow-text"></span> -->
             </div>
@@ -70,7 +111,9 @@
 
         <img src="./assets/images/placeholderBackground.jpg" alt="instructions" class="car-intro">
 
+
         <div id="w100" class="carousel-inner single-item">            
+          
             <div class="carousel-item active car1" data-interval="5000">
                 <img src="" class="Slide1 Slide1img d-block car-img" alt="...">
                 <iframe scrolling="no" class="embed-responsive-item Slide1 Slide1iframe   car-twitch" src=""
@@ -110,8 +153,11 @@
 
         <div id="hi8">
             <div class="row">
-                <span id="game-released" class="flow-text col s3 left hide-on-med-and-down"></span>
-                <span id="game-genres" class="flow-text right hide-on-med-and-down"></span>
+                <span class="flow-text col s3 left hide-on-med-and-down"></span>
+                <span class="flow-text right hide-on-med-and-down"></span>
+
+                <!-- <span id="game-released" class="flow-text col s3 left hide-on-med-and-down"></span>
+                <span id="game-genres" class="flow-text right hide-on-med-and-down"></span> -->
                 <div id="picsBTN" class="col l2 m4 s4 center" onclick="runImg()">
                     <a href="#" class="socialBtn official btn btn-outline-light">Pics</a>
                 </div>

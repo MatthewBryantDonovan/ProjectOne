@@ -32,7 +32,7 @@ img {
 }
 
 body {
-    background: black;
+    background: #0b0c10;
 }
 
 .slick-active {
@@ -95,4 +95,17 @@ button {
 
 span {
     color: #ffffff;
+
 }
+
+//start Caleb
+.game-name {
+    text-align: center;
+    color: #ffffff;
+}
+
+.game-title {
+    text-align: left;
+    color: black;
+}
+//end Caleb
