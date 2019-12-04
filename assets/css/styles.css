@@ -22,16 +22,18 @@ img {
     border: 2px solid white;
 }
 
-#hi8{
+#hi8 {
     height: 6.75vh;
     width: 100%;
     overflow: hidden;
 }
+
 .container {
     width: 100vw;
 }
 
 body {
+    overflow: hidden;
     background: #0b0c10;
 }
 
@@ -52,7 +54,10 @@ button {
     color: green;
 }
 
-.carousel-inner, #picsBTN, #youtubeBTN, #twitchBTN {
+.carousel-inner,
+#picsBTN,
+#youtubeBTN,
+#twitchBTN {
     visibility: hidden;
 }
 
@@ -81,7 +86,7 @@ button {
     height: 100%;
 }
 
-#VGHlogoMobile{
+#VGHlogoMobile {
     background: url(../images/VGHMobileColor.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -95,6 +100,7 @@ button {
 
 span {
     color: #ffffff;
+
 }
 
 .game-name {
@@ -102,11 +108,51 @@ span {
     color: #ffffff;
 }
 
+
 .game-title {
     text-align: left;
     color: black;
 }
 
+.icon-color {
+    color: #66FCF1;
+}
+
 #game-modal {
-    align-content: center;
+    visibility: hidden;
+}
+
+#gameNameTitle {
+    font-size: 1.75em;
+}
+
+#gameNameModal {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+@media screen and (max-width:600px) {
+    #gameNameTitle {
+        font-size: 0.9em;
+    }
+
+    .material-icons {
+        font-size: 1.25rem;
+    }
+}
+
+.modalStyle {
+    color: #c5c6c7;
+    background-color: #1f2833;
+}
+
+#gameNameModal {
+    color: #66FCF1;
+}
+
+.btn {
+    background-color: #45a29e;
 }
