@@ -134,6 +134,10 @@ h2 {
     font-size: 1.5em;
 }
 
+.fluid-height {
+    display: none;
+}
+
 @media screen and (max-width:600px) {
     #gameNameTitle {
         font-size: 0.9em;
