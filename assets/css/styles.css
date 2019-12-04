@@ -1,11 +1,3 @@
-body {
-    /* background-color: lightgrey; */
-    margin: 0;
-    padding: 0;
-    background-image: url("../images/placeholderBackground.jpg");
-    color: white;
-}
-
 .twitch {
     background-image: url("../images/twitchFull.png");
     background-size: 96.23px 38px;
@@ -33,6 +25,7 @@ img {
     width: 100%;
     border: 2px solid white;
 }
+
 #hi8{
     height: 6.75vh;
     width: 100%;
@@ -102,4 +95,8 @@ button {
 
 #game-entry {
     color: white;
+}
+
+span {
+    color: #ffffff;
 }

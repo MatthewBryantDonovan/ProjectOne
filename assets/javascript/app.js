@@ -17,7 +17,9 @@ function getGame() {
     }
     $("#game-entry").val("");
     getGameWebs(game);
-
+    
+    $(".car-intro").remove();
+    $(".slick-arrow").show();
     runImg();
 };
 
@@ -160,7 +162,10 @@ function getGameWebs(game) {
                     $(".Slide" + (index + 1) + "iframe").hide();
                     $(".Slide" + (index + 1) + "youtube").hide();
 
-                    $(".Slide" + (index + 1) + "img").attr("src", "./assets/images/placeholderBackground.jpg"); //FIXME: need to put princess in another castle here
+                    $(".Slide" + (index + 1) + "img").attr({
+                        src: "./assets/images/placeholderBackground.jpg",
+                        overflow: "hidden"
+                    }); //FIXME: need to put princess in another castle here
 
                     itemNo++;
                 }
@@ -224,7 +229,10 @@ function getGameWebs(game) {
 
                                     itemNo++;
                                 } else {
-                                    $(".Slide" + (index + 1) + "iframe").attr("src", "./assets/images/placeholderBackground.jpg");
+                                    $(".Slide" + (index + 1) + "iframe").attr({
+                                        src: "./assets/images/placeholderBackground.jpg",
+                                        scrolling: "no"
+                                    });
                                     itemNo++;
                                 }
                             }
@@ -233,7 +241,10 @@ function getGameWebs(game) {
                     }
                 } else {
                     for (var index = 0; index < 5; index++) {
-                    $(".Slide" + (index + 1) + "iframe").attr("src", "./assets/images/placeholderBackground.jpg");
+                    $(".Slide" + (index + 1) + "iframe").attr({
+                        src: "./assets/images/placeholderBackground.jpg",
+                        scrolling: "no"
+                    });
                     }
 
                 }
@@ -379,7 +390,6 @@ function showYoutube() {
     });
 }
 
-$("#carouselExampleFade").hide();
 $(".car1").attr("class", "car1");
 $(".car1").hide();
 $(".car2").attr("class", "car2");
@@ -390,3 +400,4 @@ $(".car4").attr("class", "car4");
 $(".car4").hide();
 $(".car5").attr("class", "car5");
 $(".car5").hide();
+$(".slick-arrow").hide();
