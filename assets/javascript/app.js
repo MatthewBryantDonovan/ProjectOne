@@ -29,7 +29,6 @@ function getGame() {
 function getGameWebs(game) {
 
     // Modal
-    $("#game-modal").show();
     $(document).ready(function () {
         $('.modal').modal();
         $(".game-name").html();
@@ -38,6 +37,8 @@ function getGameWebs(game) {
         $("#game-released").html();
         // $("$game-plot").html();
     });
+
+
 
 
     $("#carouselExampleFade").show();
@@ -103,7 +104,7 @@ function getGameWebs(game) {
 
         //display game name
         $(".game-name").html(data0.results[0].name);
-
+        $("#game-modal").css("visibility", "visible");
 
 
         // // display background image TODO: chose one of the next 2
@@ -208,6 +209,7 @@ function getGameWebs(game) {
             var x_query_game = "https://api.twitch.tv/helix/games?name=" + (gbdata.results[0].name);
             console.log(x_query_game);
 
+            $("#game-plot").html(gbdata.results[0].description);
 
             XML.open("GET", x_query_game);
             XML.setRequestHeader('Client-ID', 'ynhtm2667o42ij79qpienqgfg5jbzr');
@@ -257,10 +259,10 @@ function getGameWebs(game) {
                     }
                 } else {
                     for (var index = 0; index < 5; index++) {
-                    $(".Slide" + (index + 1) + "iframe").attr({
-                        src: "./assets/images/placeholderBackground.jpg",
-                        scrolling: "no"
-                    });
+                        $(".Slide" + (index + 1) + "iframe").attr({
+                            src: "./assets/images/placeholderBackground.jpg",
+                            scrolling: "no"
+                        });
                     }
 
                 }
@@ -406,6 +408,7 @@ function showYoutube() {
     });
 }
 
+
 $(".car1").attr("class", "car1");
 $(".car1").hide();
 $(".car2").attr("class", "car2");
@@ -417,4 +420,3 @@ $(".car4").hide();
 $(".car5").attr("class", "car5");
 $(".car5").hide();
 $(".slick-arrow").hide();
-$("#game-modal").hide();
