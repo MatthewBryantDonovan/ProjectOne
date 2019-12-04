@@ -6,44 +6,6 @@ body {
     /* color: #0b0c10; */
 }
 
-
-/* wttf */
-span {
-    color: white;
-}
-
-#game-entry {
-    color: white;
-    width: 25vw;
-    height: 5.5vh;
-    border: 1px solid #45a29e;
-    border-radius: 5px;
-    margin-top: 2.5%;
-}
-
-#game-submit {
-    position: absolute;
-    top: 2%;
-}
-
-/* .VGHype {
-    border: none;
-    width: 25vw;
-    height: 120%;
-} */
-
-#VGHype2 {
-    background-image: url("/assets/images/VGHypemanLogo.png");
-    border: none;
-    width: 100%;
-    height: auto;
-}
-
-#hypPush {
-    position: absolute;
-    top: -10%;
-}
-
 .twitch {
     background-image: url("../images/");
     background-size: 96.23px 38px;
