@@ -57,12 +57,17 @@ button {
 
 .slick-prev {
     position: absolute;
-    left: 0.25vw;
+    left: 0;
     z-index: 5;
+    padding: 10vw 15vw 10vw 0vw;
+    width: unset;
+
 }
 
 .slick-next {
     position: absolute;
-    right: 0.25vw;
+    right: 0;
     z-index: 5;
+    padding: 10vw 0vw 10vw 15vw;
+    width: unset;
 }

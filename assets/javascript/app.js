@@ -18,15 +18,7 @@ function getGame() {
     $("#game-entry").val("");
     getGameWebs(game);
     
-    // document.getElementById("game-entry").addEventListener("keyup" , function (e) { 
-    //     if(e.keyCode === 13) {
-    //         e.preventDefault();
-    //         $("#game-submit").trigger("click");
-    //     }
-    // });
-
     runImg();
-
 };
 
 
