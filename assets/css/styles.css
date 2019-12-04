@@ -71,3 +71,23 @@ button {
     padding: 10vw 0vw 10vw 15vw;
     width: unset;
 }
+
+#VGHlogo {
+    background: url(../images/VGHypemanLogo.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 25vw;
+    height: 100%;
+}
+
+#VGHlogoMobile{
+    background: url(../images/VGHMobileColor.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 17.5vw;
+    height: 100%;
+}
+
+#game-entry {
+    color: white;
+}
