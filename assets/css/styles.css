@@ -1,3 +1,7 @@
+body::-webkit-scrollbar {
+    display: none;
+  }
+
 .twitch {
     margin-top: 10px;
     background-image: url("../images/TwitchIcon.png");
@@ -19,11 +23,38 @@
 
 }
 
+#noBackPlease{
+    border: 0px;
+}
+
 .carousel-inner,
 #picsBTN,
 #youtubeBTN,
 #twitchBTN {
     visibility: hidden;
+}
+
+.searchBtn {
+    background-image: url("../images/SearchIcon.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-color: #0B0C10;
+    margin-left:3px;
+    height: 42px;
+    width: 42px;
+}
+
+.searchBtn:hover {
+    background-image: url("../images/SearchIconHover.png");
+    background-size: 100% 100%;
+    background-color: #0B0C10;
+}
+
+.searchBtn:focus {
+    background-image: url("../images/SearchIconHover.png");
+    background-size: 100% 100%;
+    background-color: #0B0C10;
+    outline: 0;
 }
 
 
@@ -266,8 +297,12 @@ h2 {
 
 #game-submit
 {
-    display: none;
+    border: 0px;
 }
+
+.modalStyle::-webkit-scrollbar {
+    display: none;
+  }
 
 .hype {
     color: #66FCF1;

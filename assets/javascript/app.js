@@ -6,6 +6,16 @@ $(".single-item").slick({
     cssEase: 'linear'
 });
 
+
+// if enter is pressed in the input field act as if it was submitted
+var userInput = document.getElementById("game-entry");
+userInput.addEventListener("keyup", function (event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById("game-submit").click();
+    }
+});
+
 var logoStatus = false;
 var homeScreen = true;
 
