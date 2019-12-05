@@ -1,4 +1,3 @@
-
 $(".single-item").slick({
     // dots: true, FIXME: if we want dots or not
     infinite: true,
@@ -24,6 +23,7 @@ function getGame() {
     $(".car-intro").remove();
     $(".slick-arrow").show();
     runImg();
+
 
     $(".intro-text").remove();
 };
