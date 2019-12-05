@@ -1,18 +1,85 @@
 .twitch {
-    background-image: url("../images/twitchFull.png");
-    background-size: 96.23px 38px;
-    /* background-repeat: no-repeat; */
+    margin-top: 10px;
+    background-image: url("../images/TwitchIcon.png");
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    background-color: #0B0C10;
+    height: 50%;
+    width: 50%;
 }
 
 .youtube {
-    background-image: url("../images/ytFull.jpg");
-    background-size: 96.23px 38px;
-    /* background-repeat: no-repeat; */
+    margin-top: 10px;
+    background-image: url("../images/YouTubeIcon.png");
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    background-color: #0B0C10;
+    height: 50%;
+    width: 50%;
+
 }
 
+.carousel-inner,
+#picsBTN,
+#youtubeBTN,
+#twitchBTN {
+    visibility: hidden;
+}
+
+
+.official {
+    margin-top: 10px;
+    background-image: url("../images/ScreenShotIcon.png");
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    background-color: #0B0C10;
+    height: 50%;
+    width: 50%;
+}
+
+.official:hover {
+    background-image: url("../images/ScreenShotIconHover.png");
+    background-size: 50px 50px;
+    background-color: #0B0C10;
+  }
+
+  .official:focus{
+      background-image: url("../images/ScreenShotIconHover.png");
+    background-size: 50px 50px;
+    background-color: #0B0C10;
+}
+
+  .youtube:hover {
+    background-image: url("../images/YouTubeIconHover.png");
+    background-size: 50px 50px;
+    background-color: #0B0C10;
+  }
+
+  .youtube:focus {
+    background-image: url("../images/YouTubeIconHover.png");
+    background-size: 50px 50px;
+    background-color: #0B0C10;
+  }
+  
+  .twitch:hover {
+    background-image: url("../images/TwitchIconHover.png");
+    background-size: 50px 50px;
+    background-color: #0B0C10;
+  }
+
+  .twitch:focus {
+    background-image: url("../images/TwitchIconHover.png");
+    background-size: 50px 50px;
+    background-color: #0B0C10;
+  }
+
 .socialBtn {
-    width: 96.23px;
-    height: 38px;
+    width: 50px;
+    height: 50px;
+}
+
+.material-tooltip-main{
+    z-index: 999999;
 }
 
 iframe,
@@ -64,6 +131,7 @@ button {
 .slick-prev {
     position: absolute;
     left: 0;
+    margin-left: 10px;
     z-index: 5;
     padding: 10vw 15vw 10vw 0vw;
     width: unset;
@@ -73,6 +141,7 @@ button {
 .slick-next {
     position: absolute;
     right: 0;
+    margin-right: 10px;
     z-index: 5;
     padding: 10vw 0vw 10vw 15vw;
     width: unset;
@@ -82,8 +151,10 @@ button {
     background: url(../images/VGHypemanLogo.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    width: 25vw;
-    height: 100%;
+    width: 200px;
+    height: 85%;
+    margin-top: 4px;
+    position: relative;
 }
 
 #VGHlogoMobile {
@@ -91,8 +162,10 @@ button {
     background-size: 100% 100%;
     background-repeat: no-repeat;
     width: 17.5vw;
-    height: 100%;
+    height: 85%;
+    margin-top: 4px;
 }
+
 
 #game-entry {
     color: white;
@@ -133,6 +206,28 @@ span {
 h2 {
     font-size: 1.5em;
 }
+
+.hype{
+    color: #66FCF1;
+    font-size: 200px;
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    margin-bottom: 10px;
+}
+
+.nav-wrapper{
+    background-color: #0B0C10;
+}
+
+.instructions{
+    font-size: 24px;
+    color: #C5C6C7;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
 
 .fluid-height {
     display: none;

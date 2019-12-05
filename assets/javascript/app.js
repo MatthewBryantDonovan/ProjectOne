@@ -23,6 +23,9 @@ function getGame() {
     $(".car-intro").remove();
     $(".slick-arrow").show();
     runImg();
+
+
+    $(".intro-text").remove();
 };
 
 
