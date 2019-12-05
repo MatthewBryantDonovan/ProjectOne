@@ -86,7 +86,7 @@ iframe,
 img {
     height: 72vh;
     width: 100%;
-    border: 2px solid white;
+    border: 2px solid #45A29E;
 }
 
 iframe {
@@ -108,8 +108,24 @@ iframe {
     width: 100%;
 }
 
+#instructionsText{
+    
+    width: 100%;
+    overflow: hidden;
+}
+
+#meetTheTeam{
+text-align: center;
+color: #66FCF1;
+font-size: 15px;
+}
+
 .container {
     width: 100vw;
+}
+
+figure {
+    display: none;
 }
 
 body {
@@ -117,7 +133,7 @@ body {
 }
 
 .slick-active {
-    background: white;
+    background: #45A29E;
 }
 
 #slick-slide-control00,
@@ -167,6 +183,7 @@ button {
     height: 85%;
     margin-top: 4px;
     position: relative;
+
 }
 
 #VGHlogoMobile {
@@ -179,8 +196,17 @@ button {
 }
 
 
+
 #game-entry {
     color: white;
+    /* width: 500px; */
+    height: 37px;
+    width: 100%;
+    background-color: rgba(102, 252, 242, 0.253);
+    border-radius: 6px;
+    border: 1px #66FCF1 solid;
+    
+    z-index: 5;
 }
 
 span {
@@ -207,6 +233,25 @@ span {
     visibility: hidden;
 }
 
+.modalStyle {
+    color: #C5C6C7;
+    background-color: #1F2833;
+}
+
+#modalFooterStyle {
+    color: #C5C6C7;
+    background-color: #1F2833;
+}
+
+.footerButton{
+    color:#C5C6C7;
+background-color:#45A29E;
+}
+
+#gameNameModal {
+    color: #66FCF1;
+}
+
 #gameNameTitle {
     font-size: 1.75em;
 }
@@ -217,6 +262,11 @@ span {
 
 h2 {
     font-size: 1.5em;
+}
+
+#game-submit
+{
+    display: none;
 }
 
 .hype {

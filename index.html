@@ -21,24 +21,25 @@
 </head>
 
 <body>
+    <div class="container">
+        <nav id="hi8 valign-wrapper">
 
-    <nav id="hi8 valign-wrapper">
+            <div class="nav-wrapper">
 
-        <div class="nav-wrapper">
+                <div class="left hide-on-small-only" id="VGHlogo"></div>
+                <div class="left show-on-small hide-on-med-and-up" id="VGHlogoMobile"></div>
+                <form action="">
+                    <ul id="nav-mobile" class="right">
+                        <li><input id="game-entry" class="form-control mr-sm-2" type="search" placeholder="Search"
+                                aria-label="Search"></li>
+                        <li><button id="game-submit" class="btn btn-outline-primary my-2 my-sm-0" type="submit"
+                                onclick="getGame()">Search</button></li>
+                    </ul>
+                </form>
+            </div>
 
-            <div class="left hide-on-small-only" id="VGHlogo"></div>
-            <div class="left show-on-small hide-on-med-and-up" id="VGHlogoMobile"></div>
-            <form action="">
-                <ul id="nav-mobile" class="right">
-                    <li><input id="game-entry" class="form-control mr-sm-2" type="search" placeholder="Search"
-                            aria-label="Search"></li>
-                    <li><button id="game-submit" class="btn btn-outline-primary my-2 my-sm-0" type="submit"
-                            onclick="getGame()">Search</button></li>
-                </ul>
-            </form>
-        </div>
-
-    </nav>
+        </nav>
+    </div>
 
     <!--  <div class="row">
         <div class="col s12 align-center">
@@ -49,7 +50,7 @@
 
 
     <!-- Modal Structure -->
-    <div id="modal1" class="modal">
+    <div id="modal1" class="modal modalStyle">
         <div class="modal-content">
             <h3 id="gameNameModal" class="game-name game-title"></h3>
             <h5>Genre: </h5>
@@ -60,8 +61,21 @@
             <h6 id="game-released"></h6>
             <h6 id="game-plot"></h6>
         </div>
-        <div class="modal-footer">
-            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        <div class="modal-footer modalStyle" id="modalFooterStyle">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat footerButton">Close</a>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal modalStyle">
+        <div class="modal-content">
+            <div> <img src="assets/images/meetTheTeamImage.png" class="responsive-img"></div>
+            <!-- <div style="width:30%;height:10vh"> <img src="assets/images/zachImage.png" class="responsive-img"><p class="col s12 m9 right">jkdhwkjdhw</p></div>
+            <div style="width:30%;height:10vh"> <img src="assets/images/zachImage.png" class="responsive-img"><p class="col s12 m9 right">jkdhwkjdhw</p></div>
+            <div style="width:30%;height:10vh"> <img src="assets/images/zachImage.png" class="responsive-img"><p class="col s12 m9 right">jkdhwkjdhw</p></div> -->
+
+        </div>
+        <div class="modal-footer modalStyle" id="modalFooterStyle">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat footerButton">Close</a>
         </div>
     </div>
 
@@ -87,8 +101,23 @@
         </div>
 
 
-        <!-- <img src="./assets/images/Instructions.png" alt="instructions" class="car-intro"> -->
-        <div class="row intro-text"><h1 class="hype">Get Hyped</h1><p class="instructions">Discover your next favorite video game or catch up on one you already love. Video Game Hypeman is built to bring you everything you need know about any game. Want to see videos about a game from YouTube? Coming right up! Need some livestreams in your life? No problem we’ll pull the top streams from Twitch now! Video Game Hypeman is a powerful tool in your personal arsenal. Go ahead and try it out, it’s magic. All you need to do is type the game you’re looking for in that nifty search bar up there and we’ll do the rest.</p></div>
+        <!-- <img src="./assets/images/InstructionsV2.png" alt="instructions" class="car-intro"> -->
+        <div class="row intro-text" id="instructionsText">
+            <h1 class="hype">Get Hyped</h1>
+            <p class="instructions">Discover your next favorite video game or catch up on one you already love. Video
+                Game Hypeman is built to bring you everything you need know about any game. Want to see videos about a
+                game from YouTube? Coming right up! Need some livestreams in your life? No problem we’ll pull the top
+                streams from Twitch now! Video Game Hypeman is a powerful tool in your personal arsenal. Go ahead and
+                try it out, it’s magic. All you need to do is type the game you’re looking for in that nifty search bar
+                up there and we’ll do the rest.</p>
+                
+                <br>
+                
+                <div class="center-align"><a class="waves-effect waves-light modal-trigger"
+                href="#modal2"><p class="instructions" id="meetTheTeam">Meet The Team!</p>
+            </a>
+        </div>
+        </div>
 
 
 

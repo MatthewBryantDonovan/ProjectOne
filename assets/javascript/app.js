@@ -6,12 +6,41 @@ $(".single-item").slick({
     cssEase: 'linear'
 });
 
+var logoStatus = false;
+var homeScreen = true;
+
+$("#VGHlogo").on("click", function(){
+    
+    if (homeScreen == false){
+    if (logoStatus == false){
+    $(".intro-text").show();
+    logoStatus = true;
+    } else {
+        $(".intro-text").hide();
+        logoStatus = false;
+    }
+}
+
+});
+
+$("#VGHlogoMobile").on("click", function(){
+    if (homeScreen == false){
+        if (logoStatus == false){
+        $(".intro-text").show();
+        logoStatus = true;
+        } else {
+            $(".intro-text").hide();
+            logoStatus = false;
+        }
+    }
+});
 
 
 var currentGameID = 0;
 
 function getGame() {
     var game = "";
+    homeScreen = false;
     event.preventDefault();
     game = $("#game-entry").val().trim();
     if (game == "") {
@@ -25,22 +54,30 @@ function getGame() {
     runImg();
 
 
-    $(".intro-text").remove();
+    $(".intro-text").hide();
 };
 
+// Modal
+$(document).ready(function () {
+    $('#modal1').modal();
+    $('#modal2').modal();
+
+    // $(".game-name").html();
+    // $("#game-genres").html();
+    // $("#game-platforms").html();
+    // $("#game-released").html();
+    // /* $("$game-plot").html(); */
+
+    
+    // $('#team').html();
+   
+});
 
 function getGameWebs(game) {
 
-    // Modal
-    $(document).ready(function () {
-        $('.modal').modal();
-        $(".game-name").html();
-        $("#game-genres").html();
-        $("#game-platforms").html();
-        $("#game-released").html();
-        /* $("$game-plot").html(); */
-    });
+    
 
+    
 
 
 
