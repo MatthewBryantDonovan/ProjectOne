@@ -24,6 +24,7 @@ function getGame() {
     $(".slick-arrow").show();
     runImg();
 
+
     $(".intro-text").remove();
 };
 
@@ -37,7 +38,7 @@ function getGameWebs(game) {
         $("#game-genres").html();
         $("#game-platforms").html();
         $("#game-released").html();
-        // $("$game-plot").html();
+        /* $("$game-plot").html(); */
     });
 
 
@@ -182,7 +183,7 @@ function getGameWebs(game) {
                     $(".Slide" + (index + 1) + "youtube").hide();
 
                     $(".Slide" + (index + 1) + "img").attr({
-                        src: "./assets/images/placeholderBackground.jpg",
+                        src: "./assets/images/mediaScreen.JPG",
                         overflow: "hidden"
                     }); //FIXME: need to put princess in another castle here
 
@@ -248,26 +249,26 @@ function getGameWebs(game) {
                                     //   });
 
                                     itemNo++;
-                                } else {
+                                } /* else {
                                     $(".Slide" + (index + 1) + "iframe").attr({
-                                        src: "./assets/images/placeholderBackground.jpg",
+                                        src: "./assets/images/mediaScreen.JPG",
                                         scrolling: "no"
                                     });
                                     itemNo++;
-                                }
+                                } */
                             }
                         }
 
                     }
-                } else {
+                } /* else {
                     for (var index = 0; index < 5; index++) {
                         $(".Slide" + (index + 1) + "iframe").attr({
-                            src: "./assets/images/placeholderBackground.jpg",
+                            src: "./assets/images/mediaScreen.JPG",
                             scrolling: "no"
                         });
                     }
 
-                }
+                } */
             }
 
             //FIXME: start chicken-coop
@@ -410,6 +411,31 @@ function showYoutube() {
     });
 }
 
+//add's giant bomb site to descriptions
+$('body').mousedown(function( event ) {
+
+    if ($(event.target).attr("data-ref-id") != undefined) {
+        if ($(event.target).attr("data-touched") == undefined){
+            $(event.target).attr("target", "_blank")
+            $(event.target).attr("data-touched", "true")
+        var hrefsuffix = $(event.target).attr("href");
+        $(event.target).attr("href", "https://www.giantbomb.com" + hrefsuffix);
+        }
+    }
+
+    //for strong elements nested within a tag
+    if ($(event.target.parentElement).attr("data-ref-id") != undefined) {
+        if ($(event.target.parentElement).attr("data-touched") == undefined){
+            $(event.target.parentElement).attr("target", "_blank")
+            $(event.target.parentElement).attr("data-touched", "true")
+        var hrefsuffix = $(event.target.parentElement).attr("href");
+        $(event.target.parentElement).attr("href", "https://www.giantbomb.com" + hrefsuffix);
+        }
+    }
+    
+
+
+});
 
 $(".car1").attr("class", "car1");
 $(".car1").hide();
