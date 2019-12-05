@@ -1,1 +1,3 @@
-# ProjectOne
+# VG Hypeman
+
+Discover your next favorite video game or catch up on one you already love. Video Game Hypeman is built to bring you everything you need know about any game. Want to see Tweets from the game’s official Twitter? Coming right up! need some livestreams in your life? No problem we’ll pull the top streams from Twitch now! Video Game Hypeman is a powerful tool in your personal arsenal. Go ahead and try it out, it’s magic. All you need to do is type the game you’re looking for in that nifty search bar up there and we’ll do the rest.
