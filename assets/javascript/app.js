@@ -1,4 +1,3 @@
-
 $(".single-item").slick({
     // dots: true, FIXME: if we want dots or not
     infinite: true,
