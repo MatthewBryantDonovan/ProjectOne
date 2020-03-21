@@ -1,5 +1,7 @@
 VG Hypeman was recreated from the ground up using Vue.JS follow these links to get to the github and new url.
-New URL: https://dashboard.heroku.com/apps/vghypeman/deploy/github
+
+New URL: https://vghypeman.herokuapp.com/
+
 New github: https://github.com/MatthewBryantDonovan/VGHypeman2.0
 
 # VG Hypeman
